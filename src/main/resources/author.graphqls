@@ -1,0 +1,21 @@
+schema{
+query: Query
+mutation: Mutation
+}
+
+type Author {
+	id: ID!
+	name: String!
+	age: Int
+}
+
+# Root
+type Query {
+	findAllAuthors: [Author]!
+	countAuthors: Int!
+}
+
+# Root
+type Mutation {
+	createAuthor(name: String!, age: Int): Author!
+}
